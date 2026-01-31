@@ -5,9 +5,12 @@ def main():
     book_text = get_book_text("books/frankenstein.txt")
     num_words = count_words(book_text)
     char_counts = count_characters(book_text)
+    char_counts_sorted = dict(
+        sorted(char_counts.items(), key=lambda char: char[1], reverse=True)
+    )
 
     print(f"Found {num_words} total words")
-    print(char_counts)
+    print(char_counts_sorted)
 
 
 def get_book_text(filepath):
