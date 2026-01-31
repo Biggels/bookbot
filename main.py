@@ -9,8 +9,15 @@ def main():
         sorted(char_counts.items(), key=lambda char: char[1], reverse=True)
     )
 
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
-    print(char_counts_sorted)
+    print("--------- Character Count -------")
+    for char in char_counts_sorted:
+        if char.isalpha():
+            print(f"{char}: {char_counts_sorted[char]}")
+    print("============= END ===============")
 
 
 def get_book_text(filepath):
