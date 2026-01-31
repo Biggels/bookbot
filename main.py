@@ -4,9 +4,9 @@ def main():
 
 def get_book_text(filepath):
     with open(filepath) as f:
-        file_contents = f.read()
+        book_text = f.read()
 
-    return file_contents
+    return book_text
 
 
 if __name__ == "__main__":
